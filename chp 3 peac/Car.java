@@ -21,22 +21,41 @@ public class Car
      */
     public Car(double fuelEfficiency)
     {
-        fuelEfficiency = fuelEfficiency
-        x = 0;
+        fuelEfficiency = fuelEfficiency;
+        fuelEfficiency = 0;
     }
 
     /**
      * this method simulates driving the car for the specified distence and 
      * reduces the amount of gas in the fuel tank
      *
-     * @pre        
+     * @pre      the specified distence will not consume more the available gas  
      * @param    distence   the specified distence will not consume more than 
-     * @return    description of the return value
      */
     public void drive( double distance )
     {
-        
-        
+        fuelInTank -= distance / fuelEfficiency;
+    }
+     
+    /**
+     * Returns the number of gallons of gas in the car's tank
+     * 
+     * @return  the number of gallons of gas in the car's tank
+     */
+    public double getGasInTank()
+    {
+        return fuelInTank;
     }
 
+    /**
+     * An example of a method - replace this comment with your own
+     *  that describes the operation of the method
+     *
+     * @pre     gallonsOfGas must be positive
+     * @param   gallonsOfGas    amount of gas to add to the car's tank
+     */
+    public void addGas(double gallonsOfGas)
+    {
+       fuelInTank += gallonsOfGas; 
+    }
 }
