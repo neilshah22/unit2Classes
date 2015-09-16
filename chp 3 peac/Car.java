@@ -17,7 +17,7 @@ public class Car
     
     
     /** 
-     * Default constructor for objects of class Car
+     * Constructor for objects of class Car that specifies the fuel efficiency
      */
     public Car(double fuelEfficiency)
     {
