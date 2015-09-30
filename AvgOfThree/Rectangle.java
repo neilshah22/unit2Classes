@@ -23,7 +23,7 @@ public class Rectangle
         
         //**Lenght of the diameter**\\
         double lod = Math.pow(a,2) + Math.pow(b,2);
-        double lod2 = lod/lod;
+        double lod2 = Math.pow(lod,.5);
         System.out.println("The lenght of the diameter is :" + lod2);
     }
 }
