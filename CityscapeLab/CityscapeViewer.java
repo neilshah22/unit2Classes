@@ -26,7 +26,8 @@ public class CityscapeViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
-        
+        Scanner city = new Scanner(System.in);
+        System.out.print ("Chose a type of sky (Regular, Space, something found on the interne): ");
         
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
