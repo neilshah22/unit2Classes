@@ -12,14 +12,7 @@ import javax.swing.JComponent;
 public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
-    // ...
-    
-    
-    
     // define the CityscapeComponent contructor and intiailize all instance variables
-    // ...
-    
-    
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
      * It does not need to be invoked explicitly.
@@ -28,11 +21,17 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        
         // invoke the draw method on each object in your Cityscape
-        // ...
         
+        Cityscape city1 = new Cityscape(0,0);
         
+        int x = get Width() - 60;
+        int y = getHeight() - 30;
+        
+        Cityscape city2 = new Cityscape(x,y);
+        city1.draw(g2);
+        city2.draw(g2);
+    
     }
     
     /**
@@ -42,7 +41,7 @@ public class CityscapeComponent extends JComponent
     public void nextFrame()
     {
         // update the objects in the cityscape so they are animated
-        // ...
+        
         
         
         
