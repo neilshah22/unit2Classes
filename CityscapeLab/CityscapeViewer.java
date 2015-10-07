@@ -26,11 +26,12 @@ public class CityscapeViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
-        
-        
+        Scanner city = new Scanner(System.in);
+        System.out.print ("Chose a type of sky : ");
+        int a = city.nextInt();
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
+        CityscapeComponent component = new CityscapeComponent(a);
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the
