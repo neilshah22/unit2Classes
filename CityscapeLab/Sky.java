@@ -34,6 +34,15 @@ public class Sky
 		System.out.println("Enter A number (0-4): ");
 		int imgVal = s.nextInt();
 		
+		Image img = null;
+			try 
+        {
+         URL url = new URL(anArray[imgVal]);
+			//URL url = new URL(getCodeBase(), "examples/strawberry.jpg");
+            img = ImageIO.read(url);
+        } catch (IOException e) {
+			e.printStackTrace();
+        }
 	
     }
 }

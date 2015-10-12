@@ -27,9 +27,10 @@ public class Building
 
     public void draw(Graphics2D g2)
     {
-        Rectangle Building = new Rectangle(xLeft, yTop, widthRand, heightRand);
+        Rectangle Building1 = new Rectangle(xLeft + 10, yTop + 15, widthRand + 10, heightRand + 15);
+        Rectangle Building2 = new Rectangle(xLeft + 15, yTop + 25, widthRand + 7, heightRand + 30);
         g2.setPaint(colorArray[colorRand]);
-        g2.fill(Building);
+        g2.fill(Building1);
     }
 }
     

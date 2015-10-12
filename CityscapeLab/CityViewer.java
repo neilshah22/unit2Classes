@@ -41,15 +41,7 @@ public class CityViewer
         // ...
  		Sky sky = new Sky();
 				
-		Image img = null;
-		try 
-        {
-         URL url = new URL( "http://i.telegraph.co.uk/multimedia/archive/01204/Full_moon_1204649c.jpg");
-			//URL url = new URL(getCodeBase(), "examples/strawberry.jpg");
-            img = ImageIO.read(url);
-        } catch (IOException e) {
-			e.printStackTrace();
-        }
+		
 				
         // a frame contains a single component; create the Cityscape component and add it to the frame
         //CityscapeComponent component = new CityscapeComponent();
