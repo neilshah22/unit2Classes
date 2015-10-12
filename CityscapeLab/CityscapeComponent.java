@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
 
+
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
@@ -18,20 +19,21 @@ public class CityscapeComponent extends JComponent
      * It does not need to be invoked explicitly.
      *
      */
-    public void paintComponent(Graphics g)
+    public void painComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
         // invoke the draw method on each object in your Cityscape
         
-        Cityscape city1 = new Cityscape(0,0);
+
+        Cityscape cityscape1 = new Cityscape(0,0);  
         
-        int x = get Width() - 60;
+        int x = getWidth() - 60;
         int y = getHeight() - 30;
         
-        Cityscape city2 = new Cityscape(x,y);
-        city1.draw(g2);
-        city2.draw(g2);
-    
+        Cityscape cityscape2 = new Cityscape(x,y);
+        cityscape1.draw(g2);
+        cityscape2.draw(g2);
+    	
     }
     
     /**
@@ -42,7 +44,7 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         
-        
+         
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
