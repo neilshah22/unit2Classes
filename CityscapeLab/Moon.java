@@ -3,38 +3,34 @@ import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Line2D;
-import java.util.Random;
+
 import java.awt.Color;
 
 /**
- * Write a description of class Building here.
+ * Write a description of class Moon here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Building
+public class Moon
 {
     /** description of instance variable x (add comment for each instance variable) */
     private int xLeft;
+    
+    /** description of instance variable y (add comment for each instance variable) */
     private int yTop;
-    private Random z;
-    private int widthRand;
-    private int heightRand;
-    private int colorRand;
-    private Color[] colorArray = {Color.BLUE, Color.RED, Color.GREEN};
+    
+  
 
     /**
-     * Default constructor for objects of class Building
+     * Default constructor for objects of class Moon
      */
-    public Building(int x, int y)
+    public Moon(int x, int y)
     {
         // initialise instance variables
         xLeft = x;
         yTop = y; 
-        z = new Random();
-        widthRand = z.nextInt(100);
-        heightRand = z.nextInt(300);
-        colorRand = z.nextInt(3);
+        
     }
 
     /**
@@ -50,11 +46,14 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
+        // put your code here
         
+        Ellipse2D.Double moon = new Ellipse2D.Double(xLeft, yTop, 80, 80);
         
-        Rectangle building = new Rectangle(xLeft, yTop, widthRand, heightRand);
-        g2.setPaint(colorArray[colorRand]);
-        g2.fill(building);
+        g2.draw(moon);
+        g2.setColor(java.awt.Color.YELLOW);
+        g2.fill(moon);
+        
         
     }
 }

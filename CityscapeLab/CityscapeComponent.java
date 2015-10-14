@@ -1,54 +1,64 @@
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JComponent;
-
-
-/**
- * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
- *  cityscape to these object.
- * 
- * @author @gcschmit
- * @version 18 July 2014
- */
-public class CityscapeComponent extends JComponent
-{
+ import java.awt.Graphics;
+ import java.awt.Graphics2D;
+ import javax.swing.JComponent;
+ import java.util.Random;
+ 
+ /**
+  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
+ @@ -11,15 +12,36 @@
+  */
+ public class CityscapeComponent extends JComponent
+ {
     // define the objects in your Cityscape as instance variables
-    // define the CityscapeComponent contructor and intiailize all instance variables
-    /**
-     * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
-     * It does not need to be invoked explicitly.
-     *
-     */
-    public void painComponent(Graphics g)
-    {
-        Graphics2D g2 = (Graphics2D) g;
-        // invoke the draw method on each object in your Cityscape
-        
+    // ...
 
-        Cityscape cityscape1 = new Cityscape(0,0);  
-        
-        int x = getWidth() - 60;
-        int y = getHeight() - 30;
-        
-        Cityscape cityscape2 = new Cityscape(x,y);
-        cityscape1.draw(g2);
-        cityscape2.draw(g2);
-    	
-    }
+    // define the CityscapeComponent contructor and intiailize all instance variables
+    // ...
+    private Sky sky;
+    private Moon moon;
+    private Random z;
+    private Building building1;
+    private int x;
+    private int y;
+    private int x1;
+    private int y1;
     
     /**
-     * Animate the cityscape by updating the objects such that they appear to be animated when they are next drawn.
-     *
+     * Descibe instance variables
      */
-    public void nextFrame()
+    public CityscapeComponent()
     {
-        // update the objects in the cityscape so they are animated
+        int x = getWidth();
+        int y = getHeight();
+        int x1 = 0;
+        int y1 = 0;
+        z = new Random();
         
-         
+        x1 = z.nextInt(200);
+        y1 = z.nextInt(100);
         
+        this.sky = new Sky(x, y);
+        this.moon = new Moon(x1, y1);
+        this.building1 = new Building(x, y);
         
-        // request that the Java Runtime repaints this component by invoking its paintComponent method
-        repaint();
     }
 
+    //* This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
+    //* It does not need to be invoked explicitly.
+    public void paintComponent(Graphics g)
+        // invoke the draw method on each object in your Cityscape
+        // ...
+    {    
+       Graphics2D g2 = (Graphics2D) g; 
+       Sky sky = new Sky(0,0);
+       Building building1 = new Building(400, 300);
+       Building building
+       Moon moon = new Moon(0,0);
+       sky.draw(g2); 
+       building1.draw(g2);
+       moon.draw(g2);
+    }
+    public void nextFrame()
+    { 
+    }
 }

@@ -1,48 +1,54 @@
-import java.lang.Object;
-import java.awt.Image.*;
-import java.awt.image.BufferedImage;
-import java.util.Scanner;
-import java.net.URL;
-import java.net.URLConnection;
-import java.io.*;
-import java.net.URLStreamHandler;
-import javax.imageio.*;
-import java.applet.Applet;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Point2D;
+import java.awt.geom.Line2D;
 
+/**
+ * Write a description of class BackGround here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 public class Sky
 {
-    private BufferedImage img;
-    
-   public Sky()
+    /** description of instance variable x (add comment for each instance variable) */
+    private int xLeft;
+    /** description of instance variable x (add comment for each instance variable) */
+    private int yTop;
+    /**
+     * Default constructor for objects of class BackGround
+     */
+    public Sky(int x1, int y1)
     {
-                                                   
-        String[] anArray;
+        // initialise instance variables
+        xLeft = x1;
+        yTop = y1;
+    }
+
+    /**
+     * An example of a method - replace this comment with your own
+     *    that describes the operation of the method
+     *
+     * @pre        preconditions for the method
+     *            (what the method assumes about the method's parameters and class's state)
+     * @post    postconditions for the method
+     *            (what the method guarantees upon completion)
+     * @param    y    description of parameter y
+     * @return    description of the return value
+     */
+    public void draw(Graphics2D g2, String str)
+    {
+        // put your code here
+        Rectangle sky = new Rectangle(xLeft, yTop, 1000, 1000);
         
-        anArray = new String[5];
-        
-        anArray[0] = "http://globe-views.com/dcim/dreams/sky/sky-04.jpg";
-        
-        anArray[1] = "http://montco.happeningmag.com/wp-content/uploads/2013/08/night-sky-hd-wallpaper-2.jpg";
-        
-        anArray[2] = "http://i.telegraph.co.uk/multimedia/archive/01204/Full_moon_1204649c.jpg";
-        
-        anArray[3] = "http://provotips.com/wp-content/uploads/2015/03/15-outer-space-wallpaper.jpg";
-        
-        anArray[4] = "http://1-ps.googleusercontent.com/xk/HJB7Y9xE-t-vEV2aS_jH234XvR/www.dailydawdle.com/images.dailydawdle.com/20-space-cat-funny-cat-photos-cats-in-space3.jpg.pagespeed.ce.pCbZRVWrwZFbqxznWsjP.jpg";
-       
-		Scanner s = new Scanner(System.in);
-		System.out.println("Enter A number (0-4): ");
-		int imgVal = s.nextInt();
-		
-		Image img = null;
-			try 
-        {
-         URL url = new URL(anArray[imgVal]);
-			//URL url = new URL(getCodeBase(), "examples/strawberry.jpg");
-            img = ImageIO.read(url);
-        } catch (IOException e) {
-			e.printStackTrace();
-        }
-	
+        g2.draw(sky);
+        if
+        g2.setColor(java.awt.Color.BLACK);
+        g2.setColor(java.awt.Color.BLUE);
+        g2.setColor(java.awt.Color.RED);
+        g2.setColor(java.awt.Color.YELLOW);
+        g2.setColor(java.awt.Color.ORANGE);
+        g2.fill(sky);
     }
 }

@@ -1,16 +1,6 @@
 import javax.swing.JFrame;
 import java.util.Scanner;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import java.net.URL;
-import java.net.URLConnection;
-import java.io.*;
-import java.net.URLStreamHandler;
-import javax.imageio.*;
-import java.applet.Applet;
-import java.awt.Image;
-
-
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
@@ -21,7 +11,6 @@ public class CityViewer
 {
     // the cityscape will be animated for 60 seconds
     static final int ANIMATION_TIME_IN_SECONDS = 60;
-	public static int imgVal;
 
    
     /**
@@ -39,25 +28,22 @@ public class CityViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
- 		Sky sky = new Sky();
-				
-		
-				
-        // a frame contains a single component; create the Cityscape component and add it to the frame
-        //CityscapeComponent component = new CityscapeComponent();
-		JLabel label = new JLabel( new ImageIcon(img));
-        frame.add(label);
-       // frame.add(component);
-        // make the frame visible which will result in the paintComponent method being invoked on the
-        //  component.
-        frame.setVisible(true);
+        Scanner sky = new Scanner(System.in);
+        System.out.print("Enter a color: ");
+        String str = sky.next();
         
-        // animate the cityscape
-//         for( int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds++ )
-//         {
-//             component.nextFrame();
-//             Thread.sleep( 1000 );
-//         }
+        // a frame contains a single component; create the Cityscape component and add it to the frame
+        CityscapeComponent component = new CityscapeComponent();
+        frame.add(component);
+        //make the frame visible which will result in the paintComponent method being invoked on the component.
+         frame.setVisible(true);
+        
+        //animate the cityscape
+        for( int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds++ )
+        {
+            component.nextFrame();
+            Thread.sleep( 1000 );
+        }
     }
 }
 
