@@ -2,7 +2,7 @@
  import java.awt.Graphics2D;
  import javax.swing.JComponent;
  import java.util.Random;
- 
+ import java.lang.String;
  /**
   * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  @@ -11,15 +12,36 @@
@@ -52,10 +52,19 @@
        Graphics2D g2 = (Graphics2D) g; 
        Sky sky = new Sky(0,0);
        Building building1 = new Building(400, 300);
-       Building building
+       Building building2 = new Building(500, 400);
+       Building building3 = new Building(600, 500);
+       Building building4 = new Building(300, 600);
+       Building building5 = new Building(700, 200);
+       Building building6 = new Building(500, 100);
        Moon moon = new Moon(0,0);
        sky.draw(g2); 
        building1.draw(g2);
+       building2.draw(g2);
+       building3.draw(g2);
+       building4.draw(g2);
+       building5.draw(g2);
+       building6.draw(g2);
        moon.draw(g2);
     }
     public void nextFrame()

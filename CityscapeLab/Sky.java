@@ -42,13 +42,14 @@ public class Sky
         // put your code here
         Rectangle sky = new Rectangle(xLeft, yTop, 1000, 1000);
         
-        g2.draw(sky);
-        if
-        g2.setColor(java.awt.Color.BLACK);
-        g2.setColor(java.awt.Color.BLUE);
-        g2.setColor(java.awt.Color.RED);
-        g2.setColor(java.awt.Color.YELLOW);
-        g2.setColor(java.awt.Color.ORANGE);
-        g2.fill(sky);
+        
+            g2.draw(sky);
+            //g2.setColor(java.awt.Color.BLACK);
+            g2.setColor(java.awt.Color.BLUE);
+            //g2.setColor(java.awt.Color.RED);
+            //g2.setColor(java.awt.Color.YELLOW);
+            //g2.setColor(java.awt.Color.ORANGE);
+            g2.fill(sky);
+        
     }
 }
