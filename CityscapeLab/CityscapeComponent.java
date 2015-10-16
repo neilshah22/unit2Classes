@@ -58,7 +58,7 @@
        Building building5 = new Building(700, 200);
        Building building6 = new Building(500, 100);
        Moon moon = new Moon(0,0);
-       sky.draw(g2); 
+       sky.draw(g2,); 
        building1.draw(g2);
        building2.draw(g2);
        building3.draw(g2);
