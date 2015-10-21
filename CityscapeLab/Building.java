@@ -16,7 +16,7 @@ public class Building
 {
     /** description of instance variable x (add comment for each instance variable) */
     private int xLeft;
-    private int yTop;
+    private int yBottom;
     private Random z;
     private int widthRand;
     private int heightRand;
@@ -30,10 +30,10 @@ public class Building
     {
         // initialise instance variables
         xLeft = x;
-        yTop = y; 
+        yBottom = y; 
         z = new Random();
-        widthRand = z.nextInt(100);
-        heightRand = z.nextInt(300);
+        
+        heightRand = z.nextInt(200)+200;
         colorRand = z.nextInt(3);
     }
 
@@ -52,7 +52,7 @@ public class Building
     {
         
         
-        Rectangle building = new Rectangle(xLeft, yTop, widthRand, heightRand);
+        Rectangle building = new Rectangle(xLeft, yBottom-heightRand, 90, heightRand);
         g2.setPaint(colorArray[colorRand]);
         g2.fill(building);
         

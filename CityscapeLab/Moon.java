@@ -51,7 +51,7 @@ public class Moon
         Ellipse2D.Double moon = new Ellipse2D.Double(xLeft, yTop, 80, 80);
         
         g2.draw(moon);
-        g2.setColor(java.awt.Color.YELLOW);
+        g2.setColor(new Color(255,255,100));
         g2.fill(moon);
         
         

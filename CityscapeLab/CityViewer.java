@@ -24,6 +24,7 @@ public class CityViewer
         
         frame.setSize(800 /* x */, 600 /* y */);
         frame.setTitle("Cityscape");
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
@@ -33,7 +34,7 @@ public class CityViewer
         String str = sky.next();
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent();
+        CityscapeComponent component = new CityscapeComponent(str);
         frame.add(component);
         //make the frame visible which will result in the paintComponent method being invoked on the component.
          frame.setVisible(true);
@@ -41,6 +42,7 @@ public class CityViewer
         //animate the cityscape
         for( int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds++ )
         {
+            
             component.nextFrame();
             Thread.sleep( 1000 );
         }

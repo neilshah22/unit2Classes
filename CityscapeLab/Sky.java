@@ -3,6 +3,7 @@ import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Line2D;
+import java.awt.Color;
 
 /**
  * Write a description of class BackGround here.
@@ -25,7 +26,7 @@ public class Sky
         xLeft = x1;
         yTop = y1;
     }
-
+    
     /**
      * An example of a method - replace this comment with your own
      *    that describes the operation of the method
@@ -41,15 +42,32 @@ public class Sky
     {
         // put your code here
         Rectangle sky = new Rectangle(xLeft, yTop, 1000, 1000);
-        
-        if(str.compareTo(BlUE){
         g2.draw(sky);
-        //g2.setColor(java.awt.Color.BLACK);
-        g2.setColor(java.awt.Color.BLUE);
-        //g2.setColor(java.awt.Color.RED);
-        //g2.setColor(java.awt.Color.YELLOW);
-        //g2.setColor(java.awt.Color.ORANGE);
+        if(str.equals("BLUE"))
+        {
+            g2.setColor(Color.BLUE);
+        }
+        else if(str.equals("BLACK"))
+        {
+            g2.setColor(Color.BLACK);
+        }
+        else if(str.equals("RED"))
+        {
+            g2.setColor(Color.RED);
+        }
+        else if(str.equals("YELLOW"))
+        {
+            g2.setColor(Color.YELLOW);
+        }
+        else if(str.equals("ORANGE"))
+        {
+            g2.setColor(Color.ORANGE);
+        }
+        else
+        {
+            g2.setColor(java.awt.Color.BLACK);
+        }
         g2.fill(sky);
-        
+
     }
 }

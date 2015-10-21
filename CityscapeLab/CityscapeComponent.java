@@ -3,6 +3,7 @@
  import javax.swing.JComponent;
  import java.util.Random;
  import java.lang.String;
+ import java.util.Scanner;
  /**
   * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  @@ -11,15 +12,36 @@
@@ -11,29 +12,29 @@
  {
     // define the objects in your Cityscape as instance variables
     // ...
-
+    Building building1, building2, building3, building4, building5, building6;
+    Moon moon;
+    Sky sky;
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
-    private Sky sky;
-    private Moon moon;
     private Random z;
-    private Building building1;
     private int x;
     private int y;
     private int x1;
     private int y1;
+    String color;
     
     /**
      * Descibe instance variables
      */
-    public CityscapeComponent()
+    public CityscapeComponent(String str)
     {
         int x = getWidth();
         int y = getHeight();
         int x1 = 0;
         int y1 = 0;
         z = new Random();
-        
+        color = str;
         x1 = z.nextInt(200);
         y1 = z.nextInt(100);
         
@@ -49,16 +50,19 @@
         // invoke the draw method on each object in your Cityscape
         // ...
     {    
-       Graphics2D g2 = (Graphics2D) g; 
+       
+       Graphics2D g2 = (Graphics2D) g;
+
        Sky sky = new Sky(0,0);
-       Building building1 = new Building(400, 300);
-       Building building2 = new Building(500, 400);
-       Building building3 = new Building(600, 500);
-       Building building4 = new Building(300, 600);
-       Building building5 = new Building(700, 200);
-       Building building6 = new Building(500, 100);
-       Moon moon = new Moon(0,0);
-       sky.draw(g2,); 
+       building1 = new Building(100, 600);
+       building2 = new Building(200, 600);
+       building3 = new Building(300, 600);
+       building4 = new Building(400, 600);
+       building5 = new Building(500, 600);
+       building6 = new Building(600, 600);
+       moon = new Moon(0,0);
+       
+       sky.draw(g2, color); 
        building1.draw(g2);
        building2.draw(g2);
        building3.draw(g2);
@@ -69,5 +73,6 @@
     }
     public void nextFrame()
     { 
+        repaint();
     }
 }
