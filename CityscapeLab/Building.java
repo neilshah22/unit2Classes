@@ -21,7 +21,7 @@ public class Building
     private int widthRand;
     private int heightRand;
     private int colorRand;
-    private Color[] colorArray = {Color.BLUE, Color.RED, Color.GREEN};
+    private Color[] colorArray = {Color.BLACK, Color.GRAY, Color.GREEN};
 
     /**
      * Default constructor for objects of class Building

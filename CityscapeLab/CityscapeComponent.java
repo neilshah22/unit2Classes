@@ -15,6 +15,7 @@
     Building building1, building2, building3, building4, building5, building6;
     Moon moon;
     Sky sky;
+    int animation = 0;
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     private Random z;
@@ -39,9 +40,14 @@
         y1 = z.nextInt(100);
         
         this.sky = new Sky(x, y);
-        this.moon = new Moon(x1, y1);
+        // this.moon = new Moon(0,0);
         this.building1 = new Building(x, y);
-        
+        this.building1 = new Building(100, 600);
+        this.building2 = new Building(200, 600);
+        this.building3 = new Building(300, 600);
+        this.building4 = new Building(400, 600);
+        this.building5 = new Building(500, 600);
+        this.building6 = new Building(600, 600);
     }
 
     //* This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -54,14 +60,8 @@
        Graphics2D g2 = (Graphics2D) g;
 
        Sky sky = new Sky(0,0);
-       building1 = new Building(100, 600);
-       building2 = new Building(200, 600);
-       building3 = new Building(300, 600);
-       building4 = new Building(400, 600);
-       building5 = new Building(500, 600);
-       building6 = new Building(600, 600);
-       moon = new Moon(0,0);
-       
+
+
        sky.draw(g2, color); 
        building1.draw(g2);
        building2.draw(g2);
@@ -74,5 +74,7 @@
     public void nextFrame()
     { 
         repaint();
+        this.moon = new Moon(animation,0);
+        animation += 10;
     }
 }

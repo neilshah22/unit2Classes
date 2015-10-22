@@ -48,7 +48,7 @@ public class Moon
     {
         // put your code here
         
-        Ellipse2D.Double moon = new Ellipse2D.Double(xLeft, yTop, 80, 80);
+        Ellipse2D.Double moon = new Ellipse2D.Double(xLeft, yTop, 100, 100);
         
         g2.draw(moon);
         g2.setColor(new Color(255,255,100));

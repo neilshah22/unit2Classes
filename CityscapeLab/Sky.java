@@ -66,6 +66,7 @@ public class Sky
         else
         {
             g2.setColor(java.awt.Color.BLACK);
+            System.out.println("Sorry I don't have that color");
         }
         g2.fill(sky);
 
